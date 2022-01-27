@@ -133,54 +133,6 @@
       "response": []
     },
     {
-      "name": "sample request Copy 4",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "id": "24b22579-11ba-4ddd-b7ef-78f70097b9c4",
-            "exec": [
-              "pm.test(\"Status code is 200\", function () {\r",
-              "    pm.response.to.have.status(200);\r",
-              "});\r",
-              "\r",
-              "pm.test(\"Body matches string\", function () {\r",
-              "    pm.expect(pm.response.text()).to.include(\"postId\");\r",
-              "});"
-            ],
-            "type": "text/javascript"
-          }
-        }
-      ],
-      "id": "7a945417-d8f9-4794-8e87-f8f03daa45d8",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "https://jsonplaceholder.typicode.com/comments?postId=2",
-          "protocol": "https",
-          "host": [
-            "jsonplaceholder",
-            "typicode",
-            "com"
-          ],
-          "path": [
-            "comments"
-          ],
-          "query": [
-            {
-              "key": "postId",
-              "value": "2"
-            }
-          ]
-        }
-      },
-      "response": []
-    },
-    {
       "name": "sample request Copy 3",
       "event": [
         {
@@ -256,6 +208,54 @@
         "method": "DELETE",
         "header": [],
         "url": "https://jsonplaceholder.typicode.com/posts/2"
+      },
+      "response": []
+    },
+    {
+      "name": "sample request Copy 4",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "24b22579-11ba-4ddd-b7ef-78f70097b9c4",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Body matches string\", function () {\r",
+              "    pm.expect(pm.response.text()).to.include(\"postId\");\r",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "id": "7a945417-d8f9-4794-8e87-f8f03daa45d8",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/comments?postId=2",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "comments"
+          ],
+          "query": [
+            {
+              "key": "postId",
+              "value": "2"
+            }
+          ]
+        }
       },
       "response": []
     }
